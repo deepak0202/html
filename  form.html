@@ -1,0 +1,49 @@
+<head>
+<script>
+function validate()
+{
+
+var name = document.myform.firstname.value;
+if(name == null || name=="")
+{
+alert("name field cant be blank");
+return false;
+}
+}
+function show()
+{
+alert("you regester");
+}
+</script>
+</head>
+<form name ="myform" action="file:///home/bridgeit/Desktop/html/test1.html" onsubmit="return validate()">
+FirstName:<input type = "text"name="firstname"><br>
+  Last name:
+  <input type="text" name="lastname">
+
+</br>
+select your gender</br>
+ <input type="radio" name="gender" value="male" checked> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other
+
+</br>
+<select name="education">
+    <option value="BE">BE</option>
+    <option value="B.tech">B.tech</option>
+    <option value="BSC">BSC</option>
+    <option value="Bcom">Bcom</option>
+  </select>
+
+<select name="cars" size="4" multiple>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat">Fiat</option>
+  <option value="audi">Audi</option>
+</select>
+
+
+
+<input type="submit" value="form submit" onclick ="show()">
+
+</form>
